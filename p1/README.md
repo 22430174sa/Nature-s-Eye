@@ -37,22 +37,22 @@ Make sure you have a modern web browser installed.
    * *Alternatively*, if using VS Code, right-click `index.html` and select **Open with Live Server**.
  ###  Desktop Layout
 #### Header component
-![Nature's Eye Header](./screenshots/Header .png)
+![Nature's Eye Header](./screenshots/Header.png)
 #### Home Page Part 1
-![Nature's Eye Home part 1](./screenshots/Home Page part 1.png)
+![Nature's Eye Home part 1](./screenshots/Home1.png)
 #### Home Page Part 2
-![Nature's Eye Home part 2](./screenshots/Home Page part 2.png)
+![Nature's Eye Home part 2](./screenshots/Home2.png)
 #### About Us Page part 1
-![Nature's Eye  About Us page 1](./screenshots/About Us 1.png)
+![Nature's Eye  About Us page 1](./screenshots/About1.png)
 #### About Us Page part 2
-![Nature's Eye  About Us page 2](./screenshots/About Us 2.png)
+![Nature's Eye  About Us page 2](./screenshots/About2.png)
 #### Contact Us Page 
-![Nature's Eye  Contact Us page ](./screenshots/Contact Us page.png)
+![Nature's Eye  Contact Us page ](screenshots/Contact.png)
 
 #### Login Page
-![Nature's Eye Login](./screenshots/login in page.png)
+![Nature's Eye Login](screenshots/login.png)
 #### Sign up Page
-![Nature's Eye About](./screenshots/Sign Up Page.png)
+![Nature's Eye About](./screenshots/Signup.png)
 #### Footer 
 ![Nature's Eye Footer](./screenshots/Footer.png)
 
