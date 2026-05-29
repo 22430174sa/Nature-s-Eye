@@ -91,7 +91,7 @@ const Home=()=> {
         </div>
 
         <div className="footer-box">
-          <a href="#" className="btn-outline-green">View All Photos</a>
+          <a href="/" className="btn-outline-green">View All Photos</a>
         </div>
       </div>
     </div>
