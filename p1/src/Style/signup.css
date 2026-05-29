@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  
+    background-position: center;
+    background-attachment: fixed;
+}
+.main-wrapper {
+    background-image: url("../assets/Login Background.jpg");
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+    padding: 20px;
+}
+.signup-card {
+    background-color: rgba(230, 243, 245, 0.721); 
+    padding: 15px;
+    border-radius: 10px;
+    width: 70%;
+    max-width: 350px;
+}
+.title {
+    text-align: center;
+    color: darkgreen;
+    margin-bottom: 30px;
+    font-style: italic;
+  
+}
+.input-group {
+    margin-bottom: 20px;
+}
+input, select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+}
+.country-section {
+    margin-top: 10px;
+    margin-bottom: 35px; }
+
+.country-section label {
+    display: block;
+    margin-bottom: 8px;
+    color: gray;
+    font-weight: bold;
+}
+.signup-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signup-btn:hover {
+    background-color: darkgreen;
+    transform: scale(1);
+    font-style: oblique;
+}
+.form-footer {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 14px;
+}
+.form-footer a {
+    color: darkgreen;
+    text-decoration: none;
+    font-weight: bold;
+}
