@@ -11,10 +11,10 @@ function Footer() {
           </p>
         </div>
         <div className="footer-socials">
-          <a href="#" className="social-link">Facebook</a>
-          <a href="#" className="social-link">Instagram</a>
-          <a href="#" className="social-link">Twitter</a>
-          <a href="#" className="social-link">YouTube</a>
+          <a href="/" className="social-link">Facebook</a>
+          <a href="/" className="social-link">Instagram</a>
+          <a href="/" className="social-link">Twitter</a>
+          <a href="/" className="social-link">YouTube</a>
         </div>
 
       </div>

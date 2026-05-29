@@ -31,28 +31,28 @@ import {Link} from 'react-router-dom';
           <ul className="nav-menu-list">
            <Link to="/" className="nav-menu-link">HOME</Link> 
             <li className="nav-menu-item item-has-dropdown">
-              <a href="#" className="nav-menu-link" onClick={(e) => e.preventDefault()}>DESTINATION ▾</a>
+              <a href="/" className="nav-menu-link" onClick={(e) => e.preventDefault()}>DESTINATION ▾</a>
               <ul className="nested-dropdown-menu">
-                <li><a href="#">Beaches</a></li>
-                <li><a href="#">Islands</a></li>
-                <li><a href="#">Forests</a></li>
-                <li><a href="#">Mountains</a></li>
-                <li><a href="#">Oceans</a></li>
+                <li><a href="/">Beaches</a></li>
+                <li><a href="/">Islands</a></li>
+                <li><a href="/">Forests</a></li>
+                <li><a href="/">Mountains</a></li>
+                <li><a href="/">Oceans</a></li>
                 <li className="dropdown-divider-line"></li>
-                <li><a href="#">Explore All</a></li>
+                <li><a href="/">Explore All</a></li>
               </ul>
             </li>
             <li className="nav-menu-item item-has-dropdown">
-              <a href="#" className="nav-menu-link" onClick={(e) => e.preventDefault()}>PHOTOGRAPHERS ▾</a>
+              <a href="/" className="nav-menu-link" onClick={(e) => e.preventDefault()}>PHOTOGRAPHERS ▾</a>
               <ul className="nested-dropdown-menu">
-                <li><a href="#">Amjad Ayoub</a></li>
-                <li><a href="#">Rasha Mahmoud </a></li>
-                <li><a href="#">Hadine Elsaadi</a></li>
+                <li><a href="/">Amjad Ayoub</a></li>
+                <li><a href="/">Rasha Mahmoud </a></li>
+                <li><a href="/">Hadine Elsaadi</a></li>
                 <li className="dropdown-divider-line"></li>
-                <li><a href="#">All Photographers</a></li>
+                <li><a href="/">All Photographers</a></li>
               </ul>
             </li>
-            <li className="nav-menu-item"><a href="#" className="nav-menu-link"> GALLERY </a></li>
+            <li className="nav-menu-item"><a href="/" className="nav-menu-link"> GALLERY </a></li>
             <li className="nav-menu-item"><Link to="/AboutUs" className="nav-menu-link">ABOUT US</Link></li>
             <li className="nav-menu-item"> <Link to="/Contact" className="nav-menu-link">CONTACT US</Link> </li>
 
