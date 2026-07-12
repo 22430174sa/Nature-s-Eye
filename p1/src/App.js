@@ -9,7 +9,7 @@ import Signup from './pages/Signup';
 import Beaches from './pages/Destinations/Beaches';
 import Mountains from'./pages/Destinations/Mountains';
 import Footer from './component/footer';
-import PhotoCard from './component/PhotoCard';
+
 
 
 
