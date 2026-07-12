@@ -6,7 +6,10 @@ import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
 import Login  from './pages/Login';
 import Signup from './pages/Signup';
+import Beaches from './pages/Destinations/Beaches';
+import Mountains from'./pages/Destinations/Mountains';
 import Footer from './component/footer';
+import PhotoCard from './component/PhotoCard';
 
 
 
@@ -24,6 +27,8 @@ function App() {
  <Route path ="/Contact" excat Component={Contact}/>
   <Route path ="/Login" excat Component={Login}/>
   <Route path ="/SignUp" excat Component={Signup}/>
+  <Route path="/destinations/mountains" element={<Mountains/>}/>
+   <Route path="/destinations/beaches" element={<Beaches />} />
  
 
 

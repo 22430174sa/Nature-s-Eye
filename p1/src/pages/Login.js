@@ -7,7 +7,7 @@ const Login=()=> {
   const [country, setCountry] = useState('');
   const handleSubmit = (e) => {
      e.preventDefault();
-  if (!email || !password || !country) {
+  if (email=='' || password=='' || country=='') {
     alert("Please fill all fields");
     return;
   }

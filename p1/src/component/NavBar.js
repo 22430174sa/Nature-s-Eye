@@ -33,13 +33,13 @@ import {Link} from 'react-router-dom';
             <li className="nav-menu-item item-has-dropdown">
               <a href="/" className="nav-menu-link" onClick={(e) => e.preventDefault()}>DESTINATION ▾</a>
               <ul className="nested-dropdown-menu">
-                <li><a href="/">Beaches</a></li>
-                <li><a href="/">Islands</a></li>
-                <li><a href="/">Forests</a></li>
-                <li><a href="/">Mountains</a></li>
-                <li><a href="/">Oceans</a></li>
+               <li><Link to="/destinations/beaches">Beaches</Link></li>
+<li><Link to="/destinations/islands">Islands</Link></li>
+<li><Link to="/destinations/forests">Forests</Link></li>
+<li><Link to="/destinations/mountains">Mountains</Link></li>
+<li><Link to="/destinations/oceans">Oceans</Link></li>
                 <li className="dropdown-divider-line"></li>
-                <li><a href="/">Explore All</a></li>
+                <li><Link to="/destinations">Explore All</Link></li>
               </ul>
             </li>
             <li className="nav-menu-item item-has-dropdown">
