@@ -1,0 +1,23 @@
+.saved-photos-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.saved-photos-page h2 {
+  font-family: sans-serif;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.empty-message {
+  font-family: sans-serif;
+  color: #777;
+  font-size: 1.1rem;
+}
+
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}

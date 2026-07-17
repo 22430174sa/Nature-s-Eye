@@ -134,6 +134,38 @@
 .item-has-dropdown:focus-within .nested-dropdown-menu {
   display: block;
 }
+.nav-saved-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.nav-saved-btn:hover {
+  background-color: #e4e4e4;
+}
+
+.nav-heart-icon {
+  font-size: 14px;
+}
+
+.nav-saved-badge {
+  background-color: #ff4d4f;
+  color: white;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 1px 6px;
+  border-radius: 10px;
+  min-width: 10px;
+  text-align: center;
+}
 
 @media (max-width: 768px) {
   .header-container {
@@ -170,6 +202,7 @@
   .item-has-dropdown:focus-within .nested-dropdown-menu {
     display: block;
   }
+  
 }
 
 

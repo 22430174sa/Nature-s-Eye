@@ -71,7 +71,7 @@
    margin: 0; 
    opacity: 0.8;
     letter-spacing: 1px;
-    color: black;
+    color: rgb(241, 235, 235);
  }
 .nav-btn {
   position: absolute;
@@ -151,20 +151,6 @@
   color: white;
 }
 .card-overlay h4 { font-size: 20px; margin: 0 0 10px 0; }
-.btn-green {
-  display: inline-block;
-  background-color: darkgreen;
-  color: white;
-  text-decoration: none;
-  padding: 8px 16px;
-  border-radius: 4px;
-  font-size: 14px;
-  width: fit-content;
-  transition: background-color 0.2s;
-}
-.btn-green:hover { 
-  background-color: darkgreen;
- }
 .footer-box { 
   text-align: center;
    margin-top: 48px; }

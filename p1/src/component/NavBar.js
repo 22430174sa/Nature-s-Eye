@@ -1,10 +1,30 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
 import '../Style/NavBar.css';
 import {Link} from 'react-router-dom'; 
 
  const NavBar=() => {
- 
+  const [savedCount, setSavedCount] = useState(0);
+
+  // Hook into localStorage to update the count when the navigation bar mounts
+  useEffect(() => {
+    const updateCount = () => {
+      const saved = JSON.parse(localStorage.getItem("savedPhotos")) || [];
+      setSavedCount(saved.length);
+    };
+
+    updateCount();
+
+    // Listen for custom events if cards update the total from other pages
+    window.addEventListener("storage", updateCount);
+    window.addEventListener("savedPhotosUpdated", updateCount);
+
+    return () => {
+      window.removeEventListener("storage", updateCount);
+      window.removeEventListener("savedPhotosUpdated", updateCount);
+    };
+  }, []);
  
   return (
     <>
@@ -21,7 +41,12 @@ import {Link} from 'react-router-dom';
             </form>
           </div>
           <div className="actions-area">
-          
+           <Link to="/SavedPhotos" className="nav-saved-btn" style={{ textDecoration: 'none' }}>
+              <span className="nav-heart-icon">❤️</span>
+              <span className="nav-saved-text">Saved</span>
+              <span className="nav-saved-badge">{savedCount}</span>
+            </Link>
+
              <Link to="/Login" className="search-submit-btn" style={{ textDecoration: 'none' }}>Login</Link>
           </div>
         </div>

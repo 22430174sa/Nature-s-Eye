@@ -33,6 +33,7 @@ function PhotoCard({ photo }) {
       "savedPhotos",
       JSON.stringify(savedPhotos)
     );
+window.dispatchEvent(new Event("savedPhotosUpdated"));
 
     setSaved(!saved);
   };

@@ -42,7 +42,7 @@ const Home=()=> {
           <img src={amjad1} alt="Wadi Al Milh" />
           <div className="slide-caption">
             <h3>United Arab Emirates</h3>
-            <p>Wadi Al Milh-Fujairah-</p>
+            <p>Wadi Al Milh-Fujairah</p>
           </div>  
         </div>
         <div className={`slide-item ${currentSlide === 1 ? 'active' : ''}`}>
@@ -70,14 +70,14 @@ const Home=()=> {
             <img src={card1} alt="Northeastern Italy"  />
             <div className="card-overlay">
               <h4>Northeastern Italy</h4>
-             <button className="btn-green">More Details</button>
+            
             </div>
           </div>
           <div className="card">
             <img src={card2} alt="Southern Africa" />
             <div className="card-overlay">
               <h4>Southern Africa</h4>
-             <button className="btn-green">More Details</button>
+             
             </div>
           </div>
           <div className="card">
@@ -85,13 +85,13 @@ const Home=()=> {
              
             <div className="card-overlay">
               <h4>Thailand</h4>
-             <button className="btn-green">More Details</button>
+             
             </div>
           </div>
         </div>
 
         <div className="footer-box">
-          <a href="/" className="btn-outline-green">View All Photos</a>
+          <a href="/" className="btn-outline-green">View More Photos</a>
         </div>
       </div>
     </div>
