@@ -1,7 +1,5 @@
-
 import './App.css';
 import NavBar from './component/NavBar';
-
 import Home from './pages/Home';
 import Contact from './pages/Contact';
 import AboutUs from './pages/AboutUs';
@@ -13,6 +11,8 @@ import Mountains from'./pages/Destinations/Mountains';
 import Islands from './pages/Destinations/Islands';
 import Forests from './pages/Destinations/Forests';
 import Oceans from './pages/Destinations/Oceans';
+import ClubTrips from './pages/ClubTrips';
+import Gallery from './pages/Gallery'; 
 import Footer from './component/footer';
 
 
@@ -31,8 +31,10 @@ function App() {
  <Route path ="/AboutUS" excat Component={AboutUs}/>
  <Route path ="/Contact" excat Component={Contact}/>
  <Route path="/SavedPhotos" excat Component={SavedPhotos}/>
-  < Route path ="/Login" excat Component={Login}/>
+ < Route path ="/Login" excat Component={Login}/>
   <Route path ="/SignUp" excat Component={Signup}/>
+    <Route path="/club-expeditions" element={<ClubTrips />} />
+    <Route path="/gallery" element={<Gallery />} />
   <Route path="/destinations/forests" element={<Forests/>}/>
   <Route  path="/destinations/islands" element={<Islands/>}/>
   <Route path="/destinations/oceans" element={<Oceans/>}/>

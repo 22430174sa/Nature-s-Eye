@@ -1,18 +1,15 @@
 import { useEffect, useState } from "react";
-import PhotoCard from "./PhotoCard"; // Adjust this import path based on your folders
-import '../Style/SavedPhotos.css'; // We will create this simple layout file next
+import PhotoCard from "./PhotoCard"; 
+import '../Style/SavedPhotos.css';
 
-// Assuming you have all your card objects saved in an array inside a 'data.js' file
 import  destinations  from "../Data/destinations"; 
 
 function SavedPhotos() {
   const [savedList, setSavedList] = useState([]);
 
   useEffect(() => {
-    // 1. Get the array of saved ID numbers from localStorage
     const savedIds = JSON.parse(localStorage.getItem("savedPhotos")) || [];
 
-    // 2. Filter your complete database array to only keep items matching those IDs
     const filteredPhotos = destinations.filter(photo => 
       savedIds.includes(photo.id)
     );

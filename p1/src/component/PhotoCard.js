@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import '../Style/PhotoCard.css';
 
-function PhotoCard({ photo }) {
+function PhotoCard({ photo ,showPhotographer = false }) {
 
   const [saved, setSaved] = useState(false);
 
@@ -46,7 +46,11 @@ window.dispatchEvent(new Event("savedPhotosUpdated"));
 
       <h3>{photo.title}</h3>
        <p className="photo-description">{photo.description}</p>
-       
+        {showPhotographer && (
+        <p className="photo-photographer">
+          📷 Captured by: <span>{photo.photographer}</span>
+        </p>
+      )}
 
       <button onClick={handleSave}>
 

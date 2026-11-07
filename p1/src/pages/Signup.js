@@ -31,6 +31,7 @@ const Signup=() =>{
               placeholder="First Name" 
               value={formData.firstName}
               onChange={handleChange}
+               required
             />
           </div>
           <div className="input-group">
@@ -40,6 +41,7 @@ const Signup=() =>{
               placeholder="Last Name" 
               value={formData.lastName}
               onChange={handleChange}
+               required
             />
           </div>
           <div className="input-group">

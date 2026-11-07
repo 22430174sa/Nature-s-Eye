@@ -1,30 +1,36 @@
-
 import React, { useState, useEffect } from 'react';
-
 import '../Style/NavBar.css';
-import {Link} from 'react-router-dom'; 
+import { Link } from 'react-router-dom'; 
 
- const NavBar=() => {
+const NavBar = () => {
   const [savedCount, setSavedCount] = useState(0);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState(null);
 
-  // Hook into localStorage to update the count when the navigation bar mounts
   useEffect(() => {
     const updateCount = () => {
       const saved = JSON.parse(localStorage.getItem("savedPhotos")) || [];
       setSavedCount(saved.length);
     };
-
     updateCount();
-
-    // Listen for custom events if cards update the total from other pages
     window.addEventListener("storage", updateCount);
     window.addEventListener("savedPhotosUpdated", updateCount);
-
     return () => {
       window.removeEventListener("storage", updateCount);
       window.removeEventListener("savedPhotosUpdated", updateCount);
     };
   }, []);
+
+  const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setActiveDropdown(null);
+  };
+
+  // 1. Updated toggle logic to control click behavior on both Desktop AND Mobile
+  const handleDropdownToggle = (e, dropdownName) => {
+    e.preventDefault();
+    setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
+  };
  
   return (
     <>
@@ -41,51 +47,77 @@ import {Link} from 'react-router-dom';
             </form>
           </div>
           <div className="actions-area">
-           <Link to="/SavedPhotos" className="nav-saved-btn" style={{ textDecoration: 'none' }}>
+            <Link to="/SavedPhotos" className="nav-saved-btn" style={{ textDecoration: 'none' }}>
               <span className="nav-heart-icon">❤️</span>
               <span className="nav-saved-text">Saved</span>
               <span className="nav-saved-badge">{savedCount}</span>
             </Link>
-
-             <Link to="/Login" className="search-submit-btn" style={{ textDecoration: 'none' }}>Login</Link>
+            <Link to="/Login" className="search-submit-btn" style={{ textDecoration: 'none' }}>Login</Link>
           </div>
         </div>
       </header>
+      
       <nav className="main-navigation-bar">
         <div className="nav-container">
-          <ul className="nav-menu-list">
-           <Link to="/" className="nav-menu-link">HOME</Link> 
-            <li className="nav-menu-item item-has-dropdown">
-              <a href="/" className="nav-menu-link" onClick={(e) => e.preventDefault()}>DESTINATION ▾</a>
-              <ul className="nested-dropdown-menu">
-               <li><Link to="/destinations/beaches">Beaches</Link></li>
-<li><Link to="/destinations/islands">Islands</Link></li>
-<li><Link to="/destinations/forests">Forests</Link></li>
-<li><Link to="/destinations/mountains">Mountains</Link></li>
-<li><Link to="/destinations/oceans">Oceans</Link></li>
-                <li className="dropdown-divider-line"></li>
-                <li><Link to="/destinations">Explore All</Link></li>
-              </ul>
-            </li>
-            <li className="nav-menu-item item-has-dropdown">
-              <a href="/" className="nav-menu-link" onClick={(e) => e.preventDefault()}>PHOTOGRAPHERS ▾</a>
-              <ul className="nested-dropdown-menu">
-                <li><a href="/">Amjad Ayoub</a></li>
-                <li><a href="/">Rasha Mahmoud </a></li>
-                <li><a href="/">Hadine Elsaadi</a></li>
-                <li className="dropdown-divider-line"></li>
-                <li><a href="/">All Photographers</a></li>
-              </ul>
-            </li>
-            <li className="nav-menu-item"><a href="/" className="nav-menu-link"> GALLERY </a></li>
-            <li className="nav-menu-item"><Link to="/AboutUs" className="nav-menu-link">ABOUT US</Link></li>
-            <li className="nav-menu-item"> <Link to="/Contact" className="nav-menu-link">CONTACT US</Link> </li>
+          
+          <button 
+            className={`menu-toggle ${isMenuOpen ? 'open' : ''}`} 
+            onClick={() => { setIsMenuOpen(!isMenuOpen); setActiveDropdown(null); }}
+            aria-label="Toggle navigation menu"
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
 
+          <ul className={`nav-menu-list ${isMenuOpen ? 'mobile-open' : ''}`}>
+            <li>
+              <Link to="/" className="nav-menu-link" onClick={handleLinkClick}>HOME</Link> 
+            </li>
+            
+            {/* 2. Uses 'dropdown-open' class to toggle visibility on both layout sizes */}
+            <li className={`nav-menu-item item-has-dropdown ${activeDropdown === 'destination' ? 'dropdown-open' : ''}`}>
+              <a href="/" className="nav-menu-link" onClick={(e) => handleDropdownToggle(e, 'destination')}>DESTINATION ▾</a>
+              <ul className="nested-dropdown-menu">
+                <li><Link to="/destinations/beaches" onClick={handleLinkClick}>Beaches</Link></li>
+                <li><Link to="/destinations/islands" onClick={handleLinkClick}>Islands</Link></li>
+                <li><Link to="/destinations/forests" onClick={handleLinkClick}>Forests</Link></li>
+                <li><Link to="/destinations/mountains" onClick={handleLinkClick}>Mountains</Link></li>
+                <li><Link to="/destinations/oceans" onClick={handleLinkClick}>Oceans</Link></li>
+                <li className="dropdown-divider-line"></li>
+                <li><Link to="/gallery" onClick={handleLinkClick}>Explore All</Link></li>
+              </ul>
+            </li>
+            
+            <li className={`nav-menu-item item-has-dropdown ${activeDropdown === 'photographers' ? 'dropdown-open' : ''}`}>
+              <a href="/" className="nav-menu-link" onClick={(e) => handleDropdownToggle(e, 'photographers')}>PHOTOGRAPHERS ▾</a>
+              <ul className="nested-dropdown-menu">
+                <li><a href="/" onClick={handleLinkClick}>Amjad Ayoub</a></li>
+                <li><a href="/" onClick={handleLinkClick}>Rasha Mahmoud</a></li>
+                <li><a href="/" onClick={handleLinkClick}>Hadine Elsaadi</a></li>
+                <li className="dropdown-divider-line"></li>
+                <li><a href="/" onClick={handleLinkClick}>All Photographers</a></li>
+              </ul>
+            </li>
+            
+            <li className="nav-menu-item">
+              <Link to="/gallery" className="nav-menu-link" onClick={handleLinkClick}>GALLERY</Link>
+            </li>
+            <li className="nav-menu-item">
+              <Link to="/club-expeditions" className="nav-menu-link" onClick={handleLinkClick}>♣ CLUB EXPEDITIONS</Link>
+            </li>
+            <li className="nav-menu-item">
+              <Link to="/AboutUs" className="nav-menu-link" onClick={handleLinkClick}>ABOUT US</Link>
+            </li>
+            <li className="nav-menu-item">
+              <Link to="/Contact" className="nav-menu-link" onClick={handleLinkClick}>CONTACT US</Link>
+            </li>
           </ul>
+
         </div>
       </nav>
     </>
   );
 }
-export default NavBar;
 
+export default NavBar;

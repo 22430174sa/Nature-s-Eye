@@ -3,7 +3,7 @@ import amjad1 from '../assets/AMJAD 1.jpg';
 import amjad3 from '../assets/AMJAD AYOUB 2.jpg';
 import amjad2 from '../assets/AMJAD AYOUB 3.jpg';
 import Lagoon from '../assets/Island-1-.webp';
-/*import mount1 from '..assets/WhatsApp Image 2026-04-16 at 5.01.22 PM.jpeg'*/
+
 import card1 from '../assets/Card3 - Copy.jpg';
 import card2 from '../assets/Card2.jpg';
 import card3 from '../assets/Card1.jpg';

@@ -6,6 +6,7 @@ import amjad3 from '../assets/AMJAD AYOUB 2.jpg';
 import card1 from '../assets/Card3 - Copy.jpg';
 import card2 from '../assets/Card2.jpg';
 import card3 from '../assets/Card1.jpg';
+import {Link} from 'react-router-dom'; 
 
 const Home=()=> {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -91,7 +92,7 @@ const Home=()=> {
         </div>
 
         <div className="footer-box">
-          <a href="/" className="btn-outline-green">View More Photos</a>
+         <li> <Link to="/gallery" className="btn-outline-green">View More Photos</Link></li>
         </div>
       </div>
     </div>

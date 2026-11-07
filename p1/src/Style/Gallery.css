@@ -1,0 +1,28 @@
+.gallery-page-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.gallery-heading-area {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.gallery-heading-area h1 {
+  font-size: 2.3rem;
+  color: #1a3a2a; /* Nature's Eye dark green focus */
+  margin-bottom: 10px;
+}
+
+.gallery-heading-area p {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.gallery-layout-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 25px;
+}
