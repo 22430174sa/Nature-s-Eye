@@ -117,7 +117,6 @@
   color: #004d00;
 }
 
-/* --- DESKTOP DROPDOWN BASE --- */
 .nested-dropdown-menu {
   position: absolute;
   top: 100%;
@@ -128,7 +127,7 @@
   border: 1px solid #e0e0e0;
   border-radius: 4px;
   list-style: none;
-  display: none; /* Hidden by default */
+  display: none; 
   z-index: 999;
 }
 .item-has-dropdown.dropdown-open .nested-dropdown-menu {

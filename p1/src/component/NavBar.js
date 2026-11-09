@@ -26,7 +26,6 @@ const NavBar = () => {
     setActiveDropdown(null);
   };
 
-  // 1. Updated toggle logic to control click behavior on both Desktop AND Mobile
   const handleDropdownToggle = (e, dropdownName) => {
     e.preventDefault();
     setActiveDropdown(activeDropdown === dropdownName ? null : dropdownName);
@@ -75,7 +74,6 @@ const NavBar = () => {
               <Link to="/" className="nav-menu-link" onClick={handleLinkClick}>HOME</Link> 
             </li>
             
-            {/* 2. Uses 'dropdown-open' class to toggle visibility on both layout sizes */}
             <li className={`nav-menu-item item-has-dropdown ${activeDropdown === 'destination' ? 'dropdown-open' : ''}`}>
               <a href="/" className="nav-menu-link" onClick={(e) => handleDropdownToggle(e, 'destination')}>DESTINATION ▾</a>
               <ul className="nested-dropdown-menu">

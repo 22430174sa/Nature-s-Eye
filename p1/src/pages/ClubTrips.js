@@ -40,7 +40,6 @@ const CLUB_TRIPS_DATA = [
 export default function ClubTrips() {
   const [selectedCountry, setSelectedCountry] = useState("All");
 
-  // Get unique countries for the filter menu
   const countries = ["All", ...new Set(CLUB_TRIPS_DATA.map(trip => trip.country))];
 
   const filteredTrips = selectedCountry === "All" 
@@ -49,13 +48,12 @@ export default function ClubTrips() {
 
   return (
     <div className="club-trips-container">
-      {/* Top Header Section */}
+    
       <header className="club-trips-header">
         <h1>Global Club Expeditions</h1>
         <p>Discover community-led hiking clubs and natural landscape excursions organized around the world.</p>
       </header>
 
-      {/* Country Filter Menu */}
       <div className="filter-wrapper">
         <label htmlFor="country-select">Filter by Country: </label>
         <select 
@@ -70,7 +68,6 @@ export default function ClubTrips() {
         </select>
       </div>
 
-      {/* Grid Display of Organized Trips */}
       <div className="trips-directory-grid">
         {filteredTrips.map(trip => (
           <div key={trip.id} className="club-trip-card">

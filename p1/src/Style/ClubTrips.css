@@ -13,7 +13,7 @@
 
 .club-trips-header h1 {
   font-size: 2.3rem;
-  color: #1a3a2a; /* Matching your environment focus theme */
+  color: #1a3a2a; 
   margin-bottom: 8px;
 }
 
@@ -83,7 +83,7 @@
   font-size: 1.3rem;
   color: #1a3a2a;
   line-height: 1.4;
-  padding-right: 75px; /* Leave space for the country badge */
+  padding-right: 75px; 
 }
 
 .trip-specs-row {
@@ -109,7 +109,7 @@
   line-height: 1.5;
   color: #555;
   margin-bottom: 20px;
-  flex-grow: 1; /* Keeps the buttons aligned down even if descriptions vary in length */
+  flex-grow: 1;
 }
 
 .club-contact-btn {

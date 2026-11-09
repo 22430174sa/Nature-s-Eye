@@ -31,7 +31,9 @@ const AboutUs = () => {
           <li>🌊 Beaches, Islands, Forests, Mountains & Oceans</li>
           <li>📸 Talented photographers from around the world</li>
           <li>🌍 Unique destinations and hidden places</li>
+          <li>♣️ Specialized Club Expeditions & Travel groups</li>
           <li>🖼️ Stunning nature gallery collections</li>
+          
         </ul>
 
         <h2>Our Vision</h2>

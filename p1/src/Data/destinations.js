@@ -3,7 +3,6 @@ import amjad1 from '../assets/AMJAD 1.jpg';
 import amjad3 from '../assets/AMJAD AYOUB 2.jpg';
 import amjad2 from '../assets/AMJAD AYOUB 3.jpg';
 import Lagoon from '../assets/Island-1-.webp';
-
 import card1 from '../assets/Card3 - Copy.jpg';
 import card2 from '../assets/Card2.jpg';
 import card3 from '../assets/Card1.jpg';
